@@ -1,56 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Oxygen&display=swap');
+
 * {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: #232526;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
 .message.sent {
-  background-color: blue;
-  color: #1890ff;
-  border-color: #91d5ff;
   border-radius: 2em 0 2em 2em;
   margin-left: auto;
 }
 
 .message.received {
-  background-color: blue;
-  color: #52c41a;
-  border-color: #b7eb8f;
   border-radius: 0 2em 2em 2em;
   margin-right: auto;
 }
 
-.message{
+.message {
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 10vw !important;
-  min-height: 5vh !important;
+  min-width: 10vw;
+  min-height: 5vh;
+  padding: 20px;
+  margin: 20px;
 }
 
-.chat-box{
+.chat-box {
   display: flex;
+  font-family: 'Oxygen', sans-serif;
   flex-direction: column;
   height: 100dvh;
   width: 100dvw;
-  padding: 5vw 2vw;
+  padding: 5vh 2vw;
   margin: auto;
   overflow: hidden;
 }
 
-button{
+button {
   background: #1890ff;
   color: white;
   border: none;
-  border-radius:  2em;
+  border-radius: 2em;
   padding: 0.5em 1em;
+  margin: 20px;
   cursor: pointer;
+  font-size: 1.25rem;
+
 }
 
-input{
+input {
   border: none;
-  border-radius: 2em 0 0 2em;
+  border-radius: 2em ;
   padding: 0.5em 1em;
+  flex-grow: 1;
   outline: none;
+  font-size: 1.25rem;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.chats {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.alert{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: rgb(197, 197, 197);
+  padding: 10px;
 }
