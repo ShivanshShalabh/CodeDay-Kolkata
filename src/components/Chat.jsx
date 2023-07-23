@@ -113,7 +113,7 @@ const Chat = () => {
             {/* {isVisible ? (
                 <div className="alert">{AlertMessage}</div>
             ) : null} */}
-            {AlertMessage}
+            <h3 className='alert'>{ AlertMessage}</h3>
             
             <h1> ChatGPT-AltVerse</h1>
 
